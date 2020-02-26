@@ -13,7 +13,9 @@ app.set("port", process.env.PORT || 8081);
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors());
+
 app.use('/api', api)
+
 
 app.use("/public", express.static(process.cwd() + "/public"));
 app.use(morgan("dev"));
